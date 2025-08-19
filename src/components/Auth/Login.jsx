@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Login = () => {
+const Login = ({handleLogin}) => {
     let [formData,setLogin] = useState({
         email:"",
         password:""
@@ -16,8 +16,7 @@ const Login = () => {
 
     const submitHandler = (e)=>{
         e.preventDefault();
-        console.log(formData);
-        console.log("data was submitted");
+        handleLogin(formData);
         setLogin({
             email:"",
             password:""
