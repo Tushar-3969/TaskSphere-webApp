@@ -1,9 +1,10 @@
+import HomePage from "./Landing_page/home/HomePage"
 
 function App() {
 
   return (
     <>
-      <h1>i am tushar</h1>
+      <HomePage/>
     </>
   )
 }
