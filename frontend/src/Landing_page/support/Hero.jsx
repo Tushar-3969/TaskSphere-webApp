@@ -6,4 +6,4 @@ const Hero = () => {
   )
 }
 
-export default HEro
+export default Hero
