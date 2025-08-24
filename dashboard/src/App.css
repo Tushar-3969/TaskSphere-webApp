@@ -674,8 +674,9 @@ hr {
 
 .list li {
   border-bottom: 0.8px solid rgb(235, 234, 234);
-  padding: 12px 10px 12px 14px;
+  padding: 12px 20px 12px 14px;
   position: relative;
+  min-height: 50px;
 }
 
 .item {
@@ -685,7 +686,30 @@ hr {
   font-weight: 300;
   font-size: 0.8rem;
   position: relative;
+  padding-right: 190px;
+  min-height: 50px;
+  margin-right: 100px;
 }
+
+.item p {
+  margin: 0;
+  padding: 0;
+  min-width: 80px;
+  white-space: nowrap;
+  z-index: 5;
+  margin-right: 10px;
+}
+
+.itemInfos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 140px;
+  z-index: 5;
+  margin-right: 15px;
+}
+
+
 
 .item-info {
   display: flex;
@@ -720,8 +744,9 @@ hr {
   width: 100%;
   height: 100%;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   display: none;
+  flex-direction: row;
 }
 
 .actions span button {
@@ -736,22 +761,61 @@ hr {
 .buy {
   background-color: #4184f3;
   color: #fff;
-  font-weight: 400;
-  font-size: 0.8rem;
-  border: 0.7px solid #4184f3;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .sell {
   background-color: #ff5722;
   color: #fff;
-  font-weight: 400;
-  font-size: 0.8rem;
-  border: 0.7px solid #ff5722;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.buy:hover {
+  background-color: #3367d6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(65, 132, 243, 0.3);
+}
+
+.sell:hover {
+  background-color: #e64a19;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(255, 87, 34, 0.3);
 }
 
 .action {
-  background-color: #fff;
-  border: 0.7px solid #9b9b9b;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  border: none;
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+  z-index: 10;
+}
+
+.action span {
+  display: flex;
+  gap: 8px;
+}
+
+.action button {
+  width: 40px;
+  height: 24px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.7rem;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
 }
 
 .icon {
