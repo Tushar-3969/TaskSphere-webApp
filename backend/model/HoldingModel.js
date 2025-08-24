@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const { model} = mongoose;
 
-const {HoldingSchema} = require("../schemas\HoldingSchema.js");
+const {HoldingSchema} = require("../schemas/HoldingSchema.js");
 
 const HoldingModel = new model("Holding",HoldingSchema)
 

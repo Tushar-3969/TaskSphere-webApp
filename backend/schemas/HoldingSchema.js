@@ -1,31 +1,31 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const HoldingSchema = new Schema({
   name: {
     type: String,
-    required
+    required: true,
   },
   qty: { 
     type: Number,
-    required
+    required: true,
   },
   avg: { 
-    type: Number ,
-    required
+    type: Number,
+    required: true,
   },
   price: { 
-    type: Number ,
-    required
+    type: Number,
+    required: true,
   },
   net: { 
-    type: String ,
-    required
+    type: String,
+    required: true,
   },
   day: {
-     type: String ,
-     required
-    },
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = { HoldingSchema };

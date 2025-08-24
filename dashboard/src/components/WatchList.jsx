@@ -29,11 +29,23 @@ export default WatchList;
 
 const WatchListItem = ({ stock }) => {
   const [showWatchListActions, setShowWatchListActions] = useState(false);
-  const handleMouseEnter = (e) => {
+
+  const handleMouseEnter = () => {
     setShowWatchListActions(true);
   };
-  const handleMouseExit = (e) => {
+
+  const handleMouseExit = () => {
     setShowWatchListActions(false);
+  };
+
+  const handleBuyClick = (stockName) => {
+    alert(`Buy order placed for ${stockName}!`);
+    // You can add more functionality here like opening a buy modal, API calls, etc.
+  };
+
+  const handleSellClick = (stockName) => {
+    alert(`Sell order placed for ${stockName}!`);
+    // You can add more functionality here like opening a sell modal, API calls, etc.
   };
 
   return (
@@ -50,20 +62,24 @@ const WatchListItem = ({ stock }) => {
           <span className="price">{stock.price}</span>
         </div>
       </div>
-      {showWatchListActions && <WatchListAction uid={stock.name} />}
+      {showWatchListActions && <WatchListAction uid={stock.name} onBuyClick={handleBuyClick} onSellClick={handleSellClick} />}
     </li>
   );
 };
 
-const WatchListAction = ({uid})=>{
+const WatchListAction = ({ uid, onBuyClick, onSellClick }) => {
   return (
-    <span className="action">
+    <div className="action">
       <span>
-        <button className="buy">Buy</button>
-        <button className="sell">Sell</button>
-        <button><i class="fa-solid fa-chart-column"></i></button>
-        <button><i class="fa-solid fa-ellipsis"></i></button>
+        <button className="buy" onClick={() => onBuyClick(uid)}>Buy</button>
+        <button className="sell" onClick={() => onSellClick(uid)}>Sell</button>
+        <button className="icon">
+          <i className="fa-solid fa-chart-bar"></i>
+        </button>
+        <button className="icon">
+          <i className="fa-solid fa-ellipsis"></i>
+        </button>
       </span>
-    </span>
-  )
-}
+    </div>
+  );
+};

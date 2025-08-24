@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const { model} = mongoose;
 
-const {PositionsSchema} = require("../schemas\PositionsSchema.js");
+const {PositionsSchema} = require("../schemas/PositionsSchema.js");
 
 const PositionsModel = new model("Position",PositionsSchema)
 
