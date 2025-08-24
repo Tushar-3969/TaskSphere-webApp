@@ -1,3 +1,4 @@
+
 # TradeNest Web App
 
 A comprehensive trading platform built with React, Node.js, and MongoDB for managing stock portfolios, watchlists, and trading operations.
@@ -314,3 +315,6 @@ For support and questions:
 ---
 
 **TradeNest** - Empowering traders with modern technology and intuitive interfaces.
+=======
+
+>>>>>>> e26cb53679fb1215eba2215c9a0b34dca7216cc9
